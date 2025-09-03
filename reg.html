@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./styles/globals/index.css">
-	<link rel="stylesheet" href="./styles/pages/index.css">
-	<script src="main.js" defer></script>
-	<title>Регистрация</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reg.css">
+	<title>Login Form</title>
+
 </head>
 <body>
-    <div class="wrapper">
-       		<header class="header">
-			<div class="container">
-				<div class="header-content">
-					<div class="logo">
-						<img src="./images/logo.png" alt="" />
-					</div>
 
-					<nav class="nav">
-						<ul class="nav-list">
-							<li class="nav-list-item active"><a href="#" class="link">Home</a></li>
-							<li class="nav-list-item"><a href="#" class="link">About</a></li>
-							<li class="nav-list-item"><a href="#" class="link">Services</a></li>
-							<li class="nav-list-item"><a href="#" class="link">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		
-		<main>
-			<div class="main-container">
+<div class="login-container">
+	<div class="close-btn">&times;</div>
 
-			</div>
-		</main>
-    </div>
+	<div class="login-header">
+		<div class="icon">🔐</div>
+		<h2>Log in to your account</h2>
+		<p>Welcome back! Please enter your details.</p>
+	</div>
+
+	<form>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="email" placeholder="Enter your email">
+		</div>
+
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" placeholder="••••••••">
+		</div>
+
+		<div class="options">
+			<label><input type="checkbox"> Remember for 30 days</label>
+			<a href="#">Forgot password</a>
+		</div>
+
+		<button type="submit" class="btn-confirm">Confirm</button>
+		<button type="button" class="btn-cancel">Cancel</button>
+	</form>
+</div>
+
 </body>
 </html>
