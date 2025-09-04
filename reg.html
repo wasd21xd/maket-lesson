@@ -231,6 +231,7 @@
 			const user = users.find(u => u.email === email && u.password === password);
 			if (user) {
 				alert("✅ Login successful!");
+				window.location.href = "index.html";
 			} else {
 				alert("❌ Incorrect email or password!");
 			}
