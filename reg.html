@@ -184,8 +184,8 @@
 
 	let isLogin = true;
 
-	switchLink.addEventListener("click", () => {
-		isLogin = !isLogin;
+	function setFormMode(loginMode) {
+		isLogin = loginMode;
 		if (isLogin) {
 			formTitle.textContent = "Log in to your account";
 			formSubtitle.textContent = "Welcome back! Please enter your details.";
@@ -197,7 +197,21 @@
 			mainBtn.textContent = "Register";
 			switchText.innerHTML = `Already have an account? <a id="switchLink">Login</a>`;
 		}
+	}
+		document.getElementById("switchLink").addEventListener("click", () => {
+			setFormMode(!isLogin);
 	});
+
+	switchText.addEventListener("click", (e) => {
+		if (e.target && e.target.id === "switchLink") {
+			e.preventDefault();
+			setFormMode(!isLogin);
+		}
+	});
+
+	const params = new URLSearchParams(window.location.search);
+	setFormMode(!params.has("register") ? true : false);
+
 
 	function getUsers() {
 		return JSON.parse(localStorage.getItem("users")) || [];
