@@ -9,7 +9,7 @@
 
     let isLogin = true; // по умолчанию — вход;
 
-    // переключение режимов (логин/регистрация);
+    // переключение режимов (логин / регистрация);
     switchLink.addEventListener("click", () => {
     isLogin = !isLogin;
     if (isLogin) {
