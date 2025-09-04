@@ -7,9 +7,9 @@
     const switchText = document.getElementById("switchText");
     const switchLink = document.getElementById("switchLink");
 
-    let isLogin = true; // по умолчанию — вход
+    let isLogin = true; // по умолчанию — вход;
 
-    // переключение режимов (логин/регистрация)
+    // переключение режимов (логин/регистрация);
     switchLink.addEventListener("click", () => {
     isLogin = !isLogin;
     if (isLogin) {
@@ -25,17 +25,17 @@
 }
 });
 
-    // получить пользователей из localStorage
+    // получить пользователей из localStorage;
     function getUsers() {
     return JSON.parse(localStorage.getItem("users")) || [];
 }
 
-    // сохранить пользователей
+    // сохранить пользователей;
     function saveUsers(users) {
     localStorage.setItem("users", JSON.stringify(users));
 }
 
-    // обработка формы
+    // обработка формы;
     form.addEventListener("submit", (e) => {
     e.preventDefault();
     const email = emailInput.value.trim();
@@ -43,7 +43,7 @@
     let users = getUsers();
 
     if (isLogin) {
-    // вход
+    // вход;
     const user = users.find(u => u.email === email && u.password === password);
     if (user) {
     alert("✅ Login successful!");
@@ -51,7 +51,7 @@
     alert("❌ Incorrect email or password!");
 }
 } else {
-    // регистрация
+    // регистрация;
     const exists = users.some(u => u.email === email);
     if (exists) {
     alert("⚠️ User with this email already exists!");
